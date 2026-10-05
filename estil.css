@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9ff;
+    color: #1a1a1a;
+}
+
+.encabezado {
+    background: #2c3e8a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.menu {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background: white;
+    color: #2c3e8a;
+}
+
+.hero {
+    background: linear-gradient(rgba(44, 62, 138, 0.75), rgba(44, 62, 138, 0.6)), 
+                url('https://images.unsplash.com/photo-1518638150340-f706e86654b8?w=1200');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+.hero-contenido h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffb347;
+    color: #1a1a1a;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.seccion {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fondo-claro {
+    background: #eef1ff;
+    border-radius: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e8a;
+    margin-bottom: 12px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 12px;
+    color: #2c3e8a;
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a {
+        padding: 6px 10px;
+        font-size: 14px; 
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero-contenido h2 {
+        font-size: 32px;
+    }
+
+    .seccion {
+        padding: 40px 20px;
+    }
+
+    .titulo-seccion {
+        font-size: 28px;
+    }
+}
